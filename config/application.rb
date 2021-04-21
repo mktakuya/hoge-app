@@ -38,6 +38,6 @@ module HogeApp
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.assets.precompile += ['graphiql/rails/application.js', 'graphiql/rails/application.css']
+    config.assets.precompile += ["graphiql/rails/application.js", "graphiql/rails/application.css"]
   end
 end
