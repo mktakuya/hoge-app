@@ -1,24 +1,52 @@
-# README
+# hoge_app(仮称)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![](https://github.com/mktakuya/hoge_app/workflows/Build/badge.svg)
 
-Things you may want to cover:
 
-* Ruby version
+## 動かし方（macOS）
 
-* System dependencies
+### 事前準備
 
-* Configuration
+#### PostgreSQL
 
-* Database creation
+* `brew install postgresql`
+* `brew services start postgresql`
+* `psql -l` でエラー出なければOK
 
-* Database initialization
 
-* How to run the test suite
+#### Ruby
 
-* Services (job queues, cache servers, search engines, etc.)
+- rbenvのインストール
+  * https://github.com/rbenv/rbenv#basic-github-checkout
+- ruby-buildのインストール
+  * `mkdir -p "$(rbenv root)"/plugins`
+  * `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
+- `.ruby-version` で指定されているバージョンのRubyをインストール
+  * `rbenv install`
+- `Gemfile.lock` の `BUNDLED WITH` で指定されているバージョンのBundlerをインストール
+  * `gem install bundler -v "X.X.X"`
 
-* Deployment instructions
 
-* ...
+### Setup
+
+```
+# リポジトリのクローン
+$ git clone https://github.com/mktakuya/hoge_app
+$ cd hoge_app
+
+# Rubyのライブラリインストール
+$ bundle install
+
+# DBセットアップ
+$ rails db:create db:migrate db:seed 
+
+# サーバ起動
+$ rails s
+```
+
+### テスト実行
+
+```
+rspec
+```
+
