@@ -39,5 +39,7 @@ module HogeApp
     config.api_only = true
 
     config.assets.precompile += ["graphiql/rails/application.js", "graphiql/rails/application.css"]
+
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
   end
 end
