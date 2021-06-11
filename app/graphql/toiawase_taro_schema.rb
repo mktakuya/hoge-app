@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class HogeAppSchema < GraphQL::Schema
+class ToiawaseTaroSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 
