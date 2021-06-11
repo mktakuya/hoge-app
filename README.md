@@ -1,6 +1,6 @@
-# hoge_app(仮称)
+# 問い合わせ太郎: server
 
-![](https://github.com/mktakuya/hoge_app/workflows/Build/badge.svg)
+![](https://github.com/mktakuya/toiawase_taro-server/workflows/Build/badge.svg)
 
 
 ## 動かし方（macOS）
@@ -31,8 +31,8 @@
 
 ```
 # リポジトリのクローン
-$ git clone https://github.com/mktakuya/hoge_app
-$ cd hoge_app
+$ git clone https://github.com/mktakuya/toiawase_taro-server
+$ cd toiawase_taro-server
 
 # Rubyのライブラリインストール
 $ bundle install
