@@ -45,9 +45,6 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     DatabaseRewinder.clean_all
-
-    SeedFu.quiet = true
-    SeedFu.seed
   end
 
   config.after(:each) do
