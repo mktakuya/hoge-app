@@ -50,3 +50,33 @@ $ rails s
 rspec
 ```
 
+## フロントでの動作確認
+
+rails consoleにて
+
+```ruby
+FactoryBot.create_list(:inquiry, 3) # 適当に3つ
+```
+
+`app/controllers/graphql_controller.rb` の `include Secured` をコメントアウトして認証Skip
+
+その状態で、以下のようなクエリを投げると、問い合わせが3つ返ってくる。
+
+```
+{
+	inquiries {
+    id
+    inquiriedAt
+    fromName
+    assignee
+    firstInteractionedAt
+    firstRepliedAt
+    firstInteractionedAt
+    summary
+    content
+    slackUrl
+    createdAt
+    updatedAt
+  }
+}
+```
