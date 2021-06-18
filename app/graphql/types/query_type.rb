@@ -14,5 +14,11 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :inquiries, [InquiryType], null: false, description: "問い合わせの一覧"
+
+    def inquiries
+      Inquiry.all
+    end
   end
 end

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
+
 module Types
   class MutationType < Types::BaseObject
+    field :create_inquiry, mutation: Mutations::CreateInquiry
+
     # TODO: remove me
     field :test_field, String, null: false,
       description: "An example field added by the generator"

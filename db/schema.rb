@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_05_28_061830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "inquiries", force: :cascade do |t|
+    t.datetime "inquiried_at", null: false
+    t.string "from_name", null: false
+    t.string "assignee", null: false
+    t.datetime "first_replied_at", null: false
+    t.datetime "first_interactioned_at", null: false
+    t.text "summary", null: false
+    t.text "content", null: false
+    t.string "slack_url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["assignee"], name: "index_inquiries_on_assignee"
+    t.index ["from_name"], name: "index_inquiries_on_from_name"
+    t.index ["inquiried_at"], name: "index_inquiries_on_inquiried_at"
+  end
 
 end
