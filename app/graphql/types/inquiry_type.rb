@@ -5,6 +5,7 @@ module Types
     field :id, ID, null: false
     field :inquiried_at, GraphQL::Types::ISO8601DateTime, null: false
     field :from_name, String, null: false
+    field :assignee, String, null: false
     field :first_replied_at, GraphQL::Types::ISO8601DateTime, null: false
     field :first_interactioned_at, GraphQL::Types::ISO8601DateTime, null: false
     field :summary, String, null: false

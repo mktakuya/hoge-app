@@ -15,7 +15,7 @@ module Types
       "Hello World!"
     end
 
-    field :inquiries, [Inquiry], null: false, description: "問い合わせの一覧"
+    field :inquiries, [InquiryType], null: false, description: "問い合わせの一覧"
 
     def inquiries
       Inquiry.all
